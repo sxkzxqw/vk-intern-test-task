@@ -56,7 +56,11 @@ const Form = () => {
 
     // тут нужно более подробно уточнить в каком формате сервер принимает данные и отправить их
     const JSONData = {
-        selectedFloor, selectedRoom, selectedTower, comment, startDate
+        'selectedFloor': selectedFloor?.value,
+        'selectedRoom': selectedRoom?.value,
+        'selectedTower': selectedTower?.value,
+        'comment': comment,
+        'date': startDate
     }
 
     const handleSubmit = (e) => {
